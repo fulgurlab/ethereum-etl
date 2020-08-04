@@ -7,7 +7,6 @@ docker-compose up
 - http://localhost:8080/
 
 ## Useful Links
-
 - [Schema](https://ethereum-etl.readthedocs.io/en/latest/schema/)
 - [Command Reference](https://ethereum-etl.readthedocs.io/en/latest/commands/)
 - [Documentation](https://ethereum-etl.readthedocs.io/)
