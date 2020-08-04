@@ -6,6 +6,12 @@ docker-compose up
 ```
 - http://localhost:8080/
 
+## How to release new docker image
+```
+git tag -a v2.0 -m "2.0"
+git push origin v2.0
+```
+
 ## Useful Links
 - [Schema](https://ethereum-etl.readthedocs.io/en/latest/schema/)
 - [Command Reference](https://ethereum-etl.readthedocs.io/en/latest/commands/)
