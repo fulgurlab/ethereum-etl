@@ -41,6 +41,10 @@ setup(
         'ethereum-dasm==0.1.4',
         'base58',
         'requests',
+        'mythril',
+        'sqlalchemy',
+        'psycopg2-binary',
+        'pg8000'
     ],
     extras_require={
         'streaming': [
