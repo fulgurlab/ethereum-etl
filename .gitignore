@@ -51,3 +51,4 @@ ENV/
 last_synced_block.txt
 output
 *.csv
+.postgresql_data

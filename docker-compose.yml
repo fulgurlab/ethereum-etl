@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+    - ./migration.sql:/docker-entrypoint-initdb.d/migration.sql:ro
+    environment:
+      POSTGRES_USER: cchain
+      POSTGRES_PASSWORD: cchain
+      POSTGRES_DB: cchain
+
+  adminer:
+    depends_on:
+      - db
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  ethereum-etl:
+    depends_on:
+      - db
+    image: fulgurlab/ethereum-etl
+    command: 'stream -p https://testapi.avax.network/ext/bc/C/rpc --output postgresql+pg8000://cchain:cchain@db:5432/cchain'

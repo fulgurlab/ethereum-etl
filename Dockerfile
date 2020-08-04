@@ -1,7 +1,7 @@
 FROM python:3.6
-MAINTAINER Evgeny Medvedev <evge.medvedev@gmail.com>
 ENV PROJECT_DIR=ethereum-etl
 
+# Prepare python env
 RUN mkdir /$PROJECT_DIR
 WORKDIR /$PROJECT_DIR
 COPY . .
